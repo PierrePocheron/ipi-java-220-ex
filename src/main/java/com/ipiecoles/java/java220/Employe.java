@@ -22,6 +22,26 @@ public class Employe {
         this.salaire = salaire;
     }
 
+    //    public final Integer getNombreAnneeAnciennete()
+//    {
+//        int nbAnneeAnciennete = 0;
+//
+//        if (dateEmbauche.getYear() == LocalDate.now().getYear()){ }
+//        else
+//        {
+//            int anneeAnciennete = dateEmbauche.getYear();
+//            int anneeEnCours = LocalDate.now().getYear();
+//
+//            nbAnneeAnciennete = anneeAnciennete - anneeEnCours;
+//        }
+//        return nbAnneeAnciennete;
+//    }
+
+    public final Integer getNombreAnneeAnciennete() {
+        return LocalDate.now().getYear() - dateEmbauche.getYear();
+    }
+
+
     public String getNom() {
         return nom;
     }
@@ -50,7 +70,11 @@ public class Employe {
         return dateEmbauche;
     }
 
-    public void setDateEmbauche(LocalDate dateEmbauche) {
+    public void setDateEmbauche(LocalDate dateEmbauche) throws Exception{
+        if(dateEmbauche != null && dateEmbauche.isAfter(LocalDate.now())){
+            throw new Exception("La date d'embauche ne peut être postérieure à la date courante");
+        }
+
         this.dateEmbauche = dateEmbauche;
     }
 
@@ -62,24 +86,7 @@ public class Employe {
         this.salaire = salaire;
     }
 
-//    public final Integer getNombreAnneeAnciennete()
-//    {
-//        int nbAnneeAnciennete = 0;
-//
-//        if (dateEmbauche.getYear() == LocalDate.now().getYear()){ }
-//        else
-//        {
-//            int anneeAnciennete = dateEmbauche.getYear();
-//            int anneeEnCours = LocalDate.now().getYear();
-//
-//            nbAnneeAnciennete = anneeAnciennete - anneeEnCours;
-//        }
-//        return nbAnneeAnciennete;
-//    }
 
-    public final Integer getNombreAnneeAnciennete() {
-        return LocalDate.now().getYear() - dateEmbauche.getYear();
-    }
 
 }
 
