@@ -1,5 +1,4 @@
 package com.ipiecoles.java.java220;
-import java.io.*;
 import org.joda.time.LocalDate;
 
 public final class Entreprise {
