@@ -22,7 +22,7 @@ public class Employe {
         this.salaire = salaire;
     }
 
-    //    public final Integer getNombreAnneeAnciennete()
+//    public final Integer getNombreAnneeAnciennete()
 //    {
 //        int nbAnneeAnciennete = 0;
 //
@@ -36,6 +36,10 @@ public class Employe {
 //        }
 //        return nbAnneeAnciennete;
 //    }
+
+    public final Integer getNbConges(){
+        return Entreprise.getNbCongesBase();
+    }
 
     public final Integer getNombreAnneeAnciennete() {
         return LocalDate.now().getYear() - dateEmbauche.getYear();

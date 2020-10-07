@@ -13,4 +13,24 @@ public final class Entreprise {
         Double PRIME = LocalDate.now().getYear()*0.5d;
         return PRIME;
     }
+
+    public static Double getSalaireBase() {
+        return SALAIRE_BASE;
+    }
+
+    public static Integer getNbCongesBase() {
+        return NB_CONGES_BASE;
+    }
+
+    public static Double getIndiceManager() {
+        return INDICE_MANAGER;
+    }
+
+    public static Double getPrimeManagerParTechnicien() {
+        return PRIME_MANAGER_PAR_TECHNICIEN;
+    }
+
+    public static Double getPrimeAnciennete() {
+        return PRIME_ANCIENNETE;
+    }
 }
