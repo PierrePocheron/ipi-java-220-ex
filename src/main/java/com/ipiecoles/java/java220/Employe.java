@@ -61,6 +61,26 @@ public class Employe {
     public void setSalaire(Double salaire) {
         this.salaire = salaire;
     }
+
+//    public final Integer getNombreAnneeAnciennete()
+//    {
+//        int nbAnneeAnciennete = 0;
+//
+//        if (dateEmbauche.getYear() == LocalDate.now().getYear()){ }
+//        else
+//        {
+//            int anneeAnciennete = dateEmbauche.getYear();
+//            int anneeEnCours = LocalDate.now().getYear();
+//
+//            nbAnneeAnciennete = anneeAnciennete - anneeEnCours;
+//        }
+//        return nbAnneeAnciennete;
+//    }
+
+    public final Integer getNombreAnneeAnciennete() {
+        return LocalDate.now().getYear() - dateEmbauche.getYear();
+    }
+
 }
 
 
