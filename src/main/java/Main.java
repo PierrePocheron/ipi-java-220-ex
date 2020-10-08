@@ -21,6 +21,9 @@ public class Main {
         System.out.println("La prime annuelle de l'employé est : " + emp1.getPrimeAnnuelle());
         System.out.println("-------------------------------");
 
+
+        System.out.println("La salaire annuelle de l'entreprise de l'employé est : " + emp1.getPrimeAnnuelle());
+
     }
 
 
