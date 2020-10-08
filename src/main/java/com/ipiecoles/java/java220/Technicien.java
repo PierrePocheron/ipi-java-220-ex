@@ -1,5 +1,5 @@
 package com.ipiecoles.java.java220;
-
+import java.util.Objects;
 import org.joda.time.LocalDate;
 
 public class Technicien extends Employe{
@@ -29,5 +29,24 @@ public class Technicien extends Employe{
     public void setGarde(Integer garde) {
         this.garde = garde;
     }
+
+
+
+
     //endregion
+
+    //region Méthodes
+    public void setSalaire(Double salaire) {
+        super.setSalaire( salaire * (1 + garde / 10));
+    }
+
+
+    public Integer getNbConges()
+    {
+        return super.getNbConges() + super.getNombreAnneeAnciennete();
+    }
+    //endregion
+
+
+
 }

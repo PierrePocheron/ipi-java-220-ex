@@ -96,7 +96,8 @@ public class Employe {
 
 
 
-    public final Integer getNbConges(){
+    public Integer getNbConges()
+    {
         return Entreprise.getNbCongesBase();
     }
 

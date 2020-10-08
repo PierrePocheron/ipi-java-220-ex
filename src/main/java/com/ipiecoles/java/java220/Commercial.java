@@ -1,7 +1,5 @@
 package com.ipiecoles.java.java220;
-
 import org.joda.time.LocalDate;
-
 import java.util.Objects;
 
 public class Commercial extends Employe{
