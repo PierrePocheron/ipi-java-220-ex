@@ -1,3 +1,4 @@
+import com.ipiecoles.java.java220.Commercial;
 import com.ipiecoles.java.java220.Employe;
 import org.joda.time.LocalDate;
 
@@ -8,6 +9,10 @@ public class Main {
 
         Employe emp1 = new Employe("Joe", "Simpson","M12345", LocalDate.now(),500d);
         Employe emp2 = new Employe("Joe", "Simpson","M12345", LocalDate.now(),500d);
+
+        Commercial com1 = new Commercial("Joe", "Simpson","M12345", LocalDate.now(),500d, 50000d, 10);
+        Commercial com2 = new Commercial("Joe", "Simpson","M12345", LocalDate.now(),500d, 50000d, 10);
+
         System.out.println("-------------------------------");
 
         System.out.println(emp1.toString());
@@ -23,6 +28,11 @@ public class Main {
 
 
         System.out.println("La salaire annuelle de l'entreprise de l'employé est : " + emp1.getPrimeAnnuelle());
+
+        System.out.println("-------------------------------");
+        System.out.println("test methode Commercial.performanceEgale : " + com1.performanceEgale(10));
+
+
 
     }
 

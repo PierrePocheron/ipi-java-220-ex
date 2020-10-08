@@ -8,6 +8,7 @@ public class Commercial extends Employe{
 
     //region Attributs
     private Double caAnnuel = 0d;
+    private Integer performance = 10;
     //endregion
 
     //region Constructeur
@@ -16,6 +17,13 @@ public class Commercial extends Employe{
     public Commercial(String nom,String prenom,String matricule, LocalDate dateEmbauche,Double salaire, Double caAnnuel){
         super(nom,prenom,matricule,dateEmbauche,salaire);
         this.caAnnuel = caAnnuel;
+
+    }
+
+    public Commercial(String nom,String prenom,String matricule, LocalDate dateEmbauche,Double salaire, Double caAnnuel, Integer performance){
+        super(nom,prenom,matricule,dateEmbauche,salaire);
+        this.caAnnuel = caAnnuel;
+        this.performance = performance;
 
     }
     //endregion
@@ -27,6 +35,14 @@ public class Commercial extends Employe{
 
     public void setCaAnnuel(Double caAnnuel) {
         this.caAnnuel = caAnnuel;
+    }
+
+    public Integer getPerformance() {
+        return performance;
+    }
+
+    public void setPerformance(Integer performance) {
+        performance = performance;
     }
     //endregion
 
@@ -55,7 +71,10 @@ public class Commercial extends Employe{
         return Objects.hash(super.hashCode(), caAnnuel);
     }
 
-
+    public boolean performanceEgale(Integer unePerformance)
+    {
+        return getPerformance().equals(unePerformance);
+    }
     //endregion
 
 
