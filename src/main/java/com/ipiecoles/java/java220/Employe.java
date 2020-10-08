@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * Created by PierrePocheron on 08/10/2020.
  */
-public class Employe {
+public  class Employe {
 
     //region Attributs
     private String nom;
