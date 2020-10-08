@@ -75,6 +75,12 @@ public class Commercial extends Employe{
     {
         return getPerformance().equals(unePerformance);
     }
+
+    public enum equivalenceNote{INSUFFISANT, PASSABLE, BIEN, TRES_BIEN, NULL}
+    {
+
+    }
+
     //endregion
 
 
