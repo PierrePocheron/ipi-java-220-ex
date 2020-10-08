@@ -49,9 +49,11 @@ public class Commercial extends Employe{
 
     //region Méthodes
     public Double getPrimeAnnuelle(){
-        Double leCaAnnuelle = caAnnuel*0.05;
-        if (leCaAnnuelle < 500d ){leCaAnnuelle = 500d;}
-        return leCaAnnuelle;
+        if(this.caAnnuel != null)
+        {
+            caAnnuel = Math.max(Math.ceil(this.caAnnuel * 0.05), 500.0d);
+        }
+        return 500.0d;
     }
 
     @Override

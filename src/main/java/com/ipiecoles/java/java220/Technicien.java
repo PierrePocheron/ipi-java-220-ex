@@ -35,6 +35,9 @@ public class Technicien extends Employe{
 
     //endregion
 
+
+
+
     //region Méthodes
     public void setSalaire(Double salaire) {
         super.setSalaire( salaire * (1 + garde / 10));
@@ -44,6 +47,11 @@ public class Technicien extends Employe{
     public Integer getNbConges()
     {
         return super.getNbConges() + super.getNombreAnneeAnciennete();
+    }
+
+    public Double getPrimeAnnuelle(){
+        Double primeAnnuelleBase = Entreprise.primeAnnuelleBase();
+        return primeAnnuelleBase + primeAnnuelleBase *((double) garde / 10) + (Entreprise.PRIME_ANCIENNETE * this.getNombreAnneeAnciennete());
     }
     //endregion
 
