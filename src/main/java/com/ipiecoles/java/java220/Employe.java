@@ -30,8 +30,55 @@ public class Employe {
     }
     //endregion
 
+    //region Getter - Setter
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getMatricule() {
+        return matricule;
+    }
+
+    public void setMatricule(String matricule) {
+        this.matricule = matricule;
+    }
+
+    public LocalDate getDateEmbauche() {
+        return dateEmbauche;
+    }
+
+    public void setDateEmbauche(LocalDate dateEmbauche) throws Exception{
+        if(dateEmbauche != null && dateEmbauche.isAfter(LocalDate.now())){
+            throw new Exception("La date d'embauche ne peut être postérieure à la date courante");
+        }
+
+        this.dateEmbauche = dateEmbauche;
+    }
+
+    public Double getSalaire() {
+        return salaire;
+    }
+
+    public void setSalaire(Double salaire) {
+        this.salaire = salaire;
+    }
+    //endregion
+
 
     //region Méthodes
+
 //    public final Integer getNombreAnneeAnciennete()
 //    {
 //        int nbAnneeAnciennete = 0;
@@ -85,56 +132,15 @@ public class Employe {
         return Objects.hash(nom, prenom, matricule, dateEmbauche, salaire);
     }
 
+    public Double augmenterSalaire(Double pourcentage){
+        return getSalaire()*pourcentage;
+    }
 
     //endregion
 
 
 
-    //region Getter - Setter
-    public String getNom() {
-        return nom;
-    }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public String getMatricule() {
-        return matricule;
-    }
-
-    public void setMatricule(String matricule) {
-        this.matricule = matricule;
-    }
-
-    public LocalDate getDateEmbauche() {
-        return dateEmbauche;
-    }
-
-    public void setDateEmbauche(LocalDate dateEmbauche) throws Exception{
-        if(dateEmbauche != null && dateEmbauche.isAfter(LocalDate.now())){
-            throw new Exception("La date d'embauche ne peut être postérieure à la date courante");
-        }
-
-        this.dateEmbauche = dateEmbauche;
-    }
-
-    public Double getSalaire() {
-        return salaire;
-    }
-
-    public void setSalaire(Double salaire) {
-        this.salaire = salaire;
-    }
-    //endregion
 
 
 
