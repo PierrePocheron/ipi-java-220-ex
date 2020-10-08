@@ -36,14 +36,36 @@ public class Manager extends Employe{
 
 
     //region Méthodes
-    public void ajouteTechnicienEquipe(Technicien technicien)
+    public void ajoutTechnicienEquipe(Technicien technicien)
     {
         equipe.add(technicien);
     }
 
+    @Override
     public void setSalaire(Double salaire)
     {
         super.setSalaire(salaire * Entreprise.INDICE_MANAGER + (salaire * (double)equipe.size() / 10));
+    }
+
+    @Override
+    public Double getPrimeAnnuelle() {
+        return Entreprise.primeAnnuelleBase() + (Entreprise.PRIME_MANAGER_PAR_TECHNICIEN * equipe.size());
+    }
+
+
+    public void augmenterSalaireEquipe(Double pourcentageAugmentation)
+    {
+        for (Technicien technicien : equipe)
+        {
+            technicien.augmenterSalaire(pourcentageAugmentation);
+        }
+    }
+
+    @Override
+    public void augmenterSalaire(Double pourcentage){
+        super.augmenterSalaire(pourcentage);
+        augmenterSalaireEquipe(pourcentage);
+
     }
 
     //endregion

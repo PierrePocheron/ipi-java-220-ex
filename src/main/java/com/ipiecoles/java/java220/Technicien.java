@@ -39,6 +39,7 @@ public class Technicien extends Employe{
 
 
     //region Méthodes
+    @Override
     public void setSalaire(Double salaire) {
         super.setSalaire( salaire * (1 + garde / 10));
     }
