@@ -136,6 +136,10 @@ public class Employe {
         return getSalaire()*pourcentage;
     }
 
+    public Double getPrimeAnnuelle(){
+        return Entreprise.primeAnnuelleBase();
+    }
+
     //endregion
 
 

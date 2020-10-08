@@ -8,12 +8,18 @@ public class Main {
 
         Employe emp1 = new Employe("Joe", "Simpson","M12345", LocalDate.now(),500d);
         Employe emp2 = new Employe("Joe", "Simpson","M12345", LocalDate.now(),500d);
+        System.out.println("-------------------------------");
 
         System.out.println(emp1.toString());
         System.out.println(emp1.equals(emp2));
+        System.out.println("-------------------------------");
 
         System.out.println(emp1.hashCode());
-        System.out.println(emp1.augmenterSalaire(1.5));
+        System.out.println("Le salaire augmenter de l'employé est : " +emp1.augmenterSalaire(1.5));
+        System.out.println("-------------------------------");
+
+        System.out.println("La prime annuelle de l'employé est : " + emp1.getPrimeAnnuelle());
+        System.out.println("-------------------------------");
 
     }
 
